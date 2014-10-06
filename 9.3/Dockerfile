@@ -12,6 +12,6 @@ ADD supervisor/conf.d /etc/supervisor/conf.d/
 ADD bin/ /usr/local/bin
 ADD cron.d/ /etc/cron.d/
 
-VOLUME ["/data/postgresql", "/etc/wal-e.d/env"]
+VOLUME ["/data/postgresql/data/", "/etc/wal-e.d/env/"]
 
 CMD ["supervisord", "-c", "/etc/supervisor/supervisord.conf"]
