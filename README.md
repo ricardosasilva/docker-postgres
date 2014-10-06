@@ -1,5 +1,9 @@
 # docker-postgres
 
+Postgres 9.3 with wal-e and supervisor
+
+TODO: Add rsyslog
+
 ## run example
 
     docker run \

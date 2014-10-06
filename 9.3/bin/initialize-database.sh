@@ -3,6 +3,10 @@ set -e
 
 chown -R postgres "$PGDATA"
 
+if [ -n "$(ls -A "$PGDATA")" ]; then
+  echo "The directory $PGDATA must be empty"
+  exit 1
+fi
 
 gosu postgres initdb
 
